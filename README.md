@@ -27,12 +27,18 @@ cargo test
 # run a single test
 cargo test builds_hello_world_demo_through_public_api
 
-# run the shortest demo
+# run the shortest demo (opens a Vulkan window)
 cargo run -p hello_world
+
+# run it and close automatically after one second
+cargo run -p hello_world -- --auto-close-ms=1000
+
+# run the same smoke path without a window
+cargo run -p hello_world -- --headless-smoke
 
 # run the richer examples
 cargo run -p class_b_device
 cargo run -p class_c_vulkansc_device
 ```
 
-The `hello_world` demo uses the current simulated UI runtime, so it proves the framework builds and runs without requiring a Vulkan SDK on the host.
+The default `hello_world` example now opens a real Vulkan window. Use `--headless-smoke` when validating the framework in a non-graphical environment.
