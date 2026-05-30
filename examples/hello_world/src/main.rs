@@ -1,3 +1,4 @@
+pub(crate) mod hello_text;
 mod vulkan_window;
 
 use std::error::Error;

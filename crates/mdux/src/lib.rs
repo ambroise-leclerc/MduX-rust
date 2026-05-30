@@ -7,6 +7,15 @@ pub use mdux_governance::{
     AuditCategory, AuditEvent, ComplianceProgram, Hazard, ProblemReport, Requirement, RequirementId,
     VerificationCase, VerificationMethod,
 };
+pub use mdux_text_authoring::{
+    compile_text_package, fingerprint_font_file, DeterministicAtlasBuilder, FontFingerprint,
+    RasterizedGlyph, TextCompilationInput,
+};
+pub use mdux_text_runtime::{GlyphDrawCommand, TextRuntime};
+pub use mdux_text_schema::{
+    ApprovedString, AtlasGlyph, CompiledGlyph, CompiledTextRun, DeterminismEvidence, FontAsset,
+    NumericGlyphEntry, NumericGlyphSet, NumericTemplate, TextDirection, TextPackage, TextureAtlas,
+};
 pub use mdux_ui::{
     FrameStatistics, GraphicsProfile, MedicalUiRuntime, PipelineMode, UiComponent, UiSdkConfig,
 };
